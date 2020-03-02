@@ -1,5 +1,8 @@
-def get_data(pag_size, num_pages, output_file):
-    client = Socrata("data.cityofnewyork.us", "io7xTnlVGyUEHLw5g4QflUqph")
+from sodapy import Socrata
+import json
+
+def get_data(app_key,page_size, num_pages, output_file):
+    client = Socrata("data.cityofnewyork.us", app_key)
     offset = 0
     res = []
     # If num_pages is not provided, calculate the num_pages so that we can read the entire content.
