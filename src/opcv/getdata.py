@@ -11,7 +11,6 @@ def get_data(app_key,page_size, num_pages, output_file):
         num_pages = total_records // page_size + 1
     #load Json_file is output is provided
     if output_file is not None:
-    	#f = open(output_file, "w")
         f = open(output_file, 'a')
     # Get records        
     for i in range(num_pages):
