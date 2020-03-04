@@ -25,8 +25,4 @@ def get_data(app_key,page_size, num_pages, output_file):
 
     if output_file is not None:
         f.close()
-    
-    # data = json.loads(f)
-    # print(data)
-
-
+        
