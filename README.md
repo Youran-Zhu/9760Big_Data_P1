@@ -46,3 +46,21 @@ opcv/src/opcv
   a) result.json
      It contains 8 records extracted from the dataset, using arguements --page_size=2, --num_pages=4, --output=result.json
 ``` 
+
+### 3) Dockerhub 
+Build immage
+```
+  docker build -t bigdata1:1.0 .
+```
+Get UUID
+```
+  docker images | grep bigdata1
+```
+Tag the image with dockerhub information
+```
+  docker tag {UUID} fedoooooo/bigdata1:1.0 
+```
+Push to dockerhub
+```
+  docker push fedoooooo/bigdata1
+```
