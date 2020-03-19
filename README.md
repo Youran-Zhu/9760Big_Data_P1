@@ -7,7 +7,7 @@ In Part I, I will develop a python command line interface that can connect to th
 
 ### 1) File Structure
 ```
-root folder: opcv 
+root folder: part1 
      contains files: Dockerfile; README.md; main.py; requirement.txt; result.json
      contains folder:src
 opcv/src
@@ -67,6 +67,45 @@ Push to dockerhub
 ## Part II
 In Part II, I used docker-compose to spin up a service that encapsulates bigdata1 container and an elasticsearch container.
 I update the original script (from Part 1) to now not only download the data but also load it into elasticsearch instance.
+
+### 1) File Structure and Updates
+Comparing with part I, I added three following files in Part II folder. I also added elastic search related package in requirement.txt
+
+```
+1) docker-compose.yml
+   Code to build docker-compose
+
+2) elastic_search.py
+   Elastic search helper function
+
+3) curl_output.txt
+   Curl request output from "curl -o curl_output.txt http://localhost:9200/opcv_bigdata/_search?size=10&pretty=true"
+```
+### 3) Docker-compose & elastic search commend line
+
+1) Build Pyth, Elastic Search and Kibana instances
+```
+docker-compose build pyth
+```
+2) Lauch these services
+```
+docker-compose up -d
+```
+3) Run main.py script to push to elastic search 
+```
+docker-compose run -e APP_KEY={api_key} -v ${PWD}:/app pyth python main.py --page_size=74 --num_pages=1 --output=results.json
+```
+4)Kill the services if needed
+```
+docker-compose down
+```
+5) Using curl to request our data loaded into ElasticSearch  
+```
+curl -o curl_output.txt http://localhost:9200/opcv_bigdata/_search?size=10&pretty=true
+```
+
+## Part III
+I loaded 50,000 records into ElasticSearch. In this part, I visualized these records with Kibana
 
 
 
