@@ -109,5 +109,9 @@ I loaded 50,000 records into ElasticSearch. In this part, I visualized these rec
 
 ![Counts of different fine amount vs Violation Type](https://github.com/Youran-Zhu/9760Big_Data_P1/blob/master/part3/count_fineAmount_violationType.png)
 
-![Violation of each license type by each issue agency]
-(https://github.com/Youran-Zhu/9760Big_Data_P1/blob/master/part3/issueAgency_licenseType.png)
+![Violation of each license type by each issue agency](https://github.com/Youran-Zhu/9760Big_Data_P1/blob/master/part3/issueAgency_licenseType.png)
+
+![Monthly count of violation](https://github.com/Youran-Zhu/9760Big_Data_P1/blob/master/part3/count_monthly.png)
+
+![Total fine amount of different violation type in each state](https://github.com/Youran-Zhu/9760Big_Data_P1/blob/master/part3/Sum_fineAmount_states.png)
+
