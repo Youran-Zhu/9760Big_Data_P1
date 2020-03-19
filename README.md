@@ -64,3 +64,9 @@ Push to dockerhub
 ```
   docker push fedoooooo/bigdata1
 ```
+## Part II
+In Part II, I used docker-compose to spin up a service that encapsulates bigdata1 container and an elasticsearch container.
+I update the original script (from Part 1) to now not only download the data but also load it into elasticsearch instance.
+
+
+
