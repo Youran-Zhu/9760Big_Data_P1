@@ -95,7 +95,7 @@ docker-compose up -d
 ```
 docker-compose run -e APP_KEY={api_key} -v ${PWD}:/app pyth python main.py --page_size=74 --num_pages=1 --output=results.json
 ```
-4)Kill the services if needed
+4) Kill the services if needed
 ```
 docker-compose down
 ```
@@ -107,5 +107,6 @@ curl -o curl_output.txt http://localhost:9200/opcv_bigdata/_search?size=10&prett
 ## Part III
 I loaded 50,000 records into ElasticSearch. In this part, I visualized these records with Kibana
 
-
+![Counts of different fine amount vs Violation Type
+(https://github.com/Youran-Zhu/9760Big_Data_P1/blob/master/part3/count_fineAmount_violationType.png)
 
