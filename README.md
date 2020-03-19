@@ -105,13 +105,17 @@ curl -o curl_output.txt http://localhost:9200/opcv_bigdata/_search?size=10&prett
 ```
 
 ## Part III
-I loaded 50,000 records into ElasticSearch. In this part, I visualized these records with Kibana
+I loaded 50,000 records into ElasticSearch. In this part, I visualized these records with Kibana.
 
+1) Counts of different fine amount vs Violation Type
 ![Counts of different fine amount vs Violation Type](https://github.com/Youran-Zhu/9760Big_Data_P1/blob/master/part3/count_fineAmount_violationType.png)
 
+2) Violation of each license type by each issue agency
 ![Violation of each license type by each issue agency](https://github.com/Youran-Zhu/9760Big_Data_P1/blob/master/part3/issueAgency_licenseType.png)
 
+3) Monthly count of violation
 ![Monthly count of violation](https://github.com/Youran-Zhu/9760Big_Data_P1/blob/master/part3/count_monthly.png)
 
+4) Total fine amount of different violation type in each state
 ![Total fine amount of different violation type in each state](https://github.com/Youran-Zhu/9760Big_Data_P1/blob/master/part3/Sum_fineAmount_states.png)
 
