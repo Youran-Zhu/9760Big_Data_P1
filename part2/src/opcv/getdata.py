@@ -4,7 +4,6 @@ from src.opcv.elastic_search import create_and_update_index,load_elasticsearch
 
 def get_data(app_key,page_size, num_pages, output_file):
     client = Socrata("data.cityofnewyork.us", app_key)
-    #offset = 0
     res = []
     # If num_pages is not provided, calculate the num_pages so that we can read the entire content.
     if num_pages is None:
@@ -25,8 +24,6 @@ def get_data(app_key,page_size, num_pages, output_file):
         #push record to elasticsearch 
         for record in one_page:
             load_elasticsearch(es, 'opcv_bigdata', record)
-
-        #offset += page_size
 
     if output_file is not None:
         f.close()
