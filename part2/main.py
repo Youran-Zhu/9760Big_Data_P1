@@ -15,8 +15,7 @@ if __name__ == '__main__':
     page_size = args.page_size
     num_pages = args.num_pages
     output_file = args.output
-    #print(app_key)
-    #print(type(app_key))
+    
     get_data(app_key,page_size,num_pages,output_file)
 
  
